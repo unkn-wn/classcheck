@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="Slide" id="iN0-l3-epB" customClass="slide" customModule="Class_Check" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EFV-Fo-uwz">
+                    <rect key="frame" x="20" y="287" width="374" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="374" id="WZB-1J-6VU"/>
+                        <constraint firstAttribute="height" constant="200" id="oMz-ad-h6c"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="NotoSansChakma-Regular" family="Noto Sans Chakma" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rfv-Lb-w8P">
+                    <rect key="frame" x="69.5" y="69" width="275" height="154"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="275" id="B4R-ES-XTc"/>
+                        <constraint firstAttribute="height" constant="154" id="qPQ-Aa-8la"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="clip" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rZN-N5-d51">
+                    <rect key="frame" x="20" y="231" width="374" height="48.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="374" id="5Jl-aM-H1b"/>
+                        <constraint firstAttribute="height" constant="48.5" id="Dcn-43-2e5"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="NotoSansChakma-Regular" family="Noto Sans Chakma" pointSize="33"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ed-Zb-wfb">
+                    <rect key="frame" x="177" y="495" width="60" height="42"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="42" id="VWH-Yv-01L"/>
+                        <constraint firstAttribute="width" constant="60" id="X8t-Uj-Wgs"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                    <state key="normal" title=" ">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="8ed-Zb-wfb" firstAttribute="top" secondItem="EFV-Fo-uwz" secondAttribute="bottom" constant="8" symbolic="YES" id="0CR-31-5eh"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="rZN-N5-d51" secondAttribute="trailing" constant="20" id="18n-kl-895"/>
+                <constraint firstItem="rZN-N5-d51" firstAttribute="top" secondItem="rfv-Lb-w8P" secondAttribute="bottom" constant="8" symbolic="YES" id="8WF-QI-wO2"/>
+                <constraint firstItem="EFV-Fo-uwz" firstAttribute="top" secondItem="rZN-N5-d51" secondAttribute="bottom" constant="7.5" id="AzG-c7-XFd"/>
+                <constraint firstItem="EFV-Fo-uwz" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="Wss-8Q-c37"/>
+                <constraint firstItem="EFV-Fo-uwz" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Xds-yR-AJ8"/>
+                <constraint firstItem="rZN-N5-d51" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Y2n-qG-gWa"/>
+                <constraint firstItem="8ed-Zb-wfb" firstAttribute="top" secondItem="EFV-Fo-uwz" secondAttribute="bottom" constant="8" symbolic="YES" id="ZoL-EZ-ChI"/>
+                <constraint firstItem="8ed-Zb-wfb" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="gm7-Nl-REs"/>
+                <constraint firstItem="rfv-Lb-w8P" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="25" id="hDu-sm-oPf"/>
+                <constraint firstItem="rfv-Lb-w8P" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="hEg-HM-PMg"/>
+                <constraint firstItem="rZN-N5-d51" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="m8Z-IX-HSj"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="EFV-Fo-uwz" secondAttribute="trailing" constant="20" id="zIB-hw-EJU"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="descriptionLabel" destination="EFV-Fo-uwz" id="Fmx-SC-2Wy"/>
+                <outlet property="image" destination="rfv-Lb-w8P" id="KE8-1p-42n"/>
+                <outlet property="nextButton" destination="8ed-Zb-wfb" id="UrG-v9-c3u"/>
+                <outlet property="title" destination="rZN-N5-d51" id="1Vg-V2-lRj"/>
+            </connections>
+            <point key="canvasLocation" x="34.782608695652179" y="34.821428571428569"/>
+        </view>
+    </objects>
+</document>
