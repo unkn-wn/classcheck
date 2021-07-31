@@ -20,7 +20,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
     @IBOutlet weak var tookClassTable: UITableView!
     @IBOutlet weak var nextClassDate: UILabel!
     @IBOutlet weak var pageControl: UIPageControl!
-
+    @IBOutlet weak var lastClass: UILabel!
     
     var name:String = ""
     var numClasses:Int = 0
@@ -29,7 +29,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
     
     override func viewDidLoad() {
         tookClassArray = UserDefaults.standard.array(forKey: String(id)) ?? []
-        
+
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "appbackground")!)
         tookClassTable.backgroundColor = UIColor(white: 1, alpha: 0.1)
@@ -171,12 +171,16 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:UITableViewCell = tookClassTable.dequeueReusableCell(withIdentifier: "tookClassCell")!
         
+        lastClass.text = ""
+        
         cell.textLabel?.text = tookClassArray[indexPath.row] as? String
         cell.layer.cornerRadius = 10
         cell.layer.masksToBounds = true
         cell.backgroundColor = UIColor(white: 1, alpha: 0.50)
         
         if(tookClassArray.count >= numClasses){
+            let temp: String = ("Most recent class: " + (tookClassArray.last as! String))
+            lastClass.text! = temp
             tookClassArray = []
             UserDefaults.standard.removeObject(forKey: String(id))
             UserDefaults.standard.set(tookClassArray, forKey: String(id))

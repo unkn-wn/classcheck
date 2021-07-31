@@ -27,12 +27,14 @@ class MasterViewController: UITableViewController, GADBannerViewDelegate {
     
     var bannerView: GADBannerView!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print(objects)
         print(classDuration)
         print(classesTaken)
         print(interval)
+        
         
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "appbackground")!)
         
@@ -57,6 +59,7 @@ class MasterViewController: UITableViewController, GADBannerViewDelegate {
         
         bannerView = GADBannerView(adSize: kGADAdSizeBanner)
         addBannerViewToView(bannerView)
+        
         
     }
     
@@ -135,7 +138,24 @@ class MasterViewController: UITableViewController, GADBannerViewDelegate {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return objects.count
+        var numOfSections: Int = 0
+        if objects.count > 0
+            {
+                tableView.separatorStyle = .singleLine
+                numOfSections = 1
+                tableView.backgroundView = nil
+            }
+            else
+            {
+                let noDataLabel: UILabel  = UILabel(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: tableView.bounds.size.height))
+                    noDataLabel.text          = "Create a class with the +!"
+                    noDataLabel.textColor     = UIColor(white: 1, alpha: 0.5)
+                    noDataLabel.textAlignment = .center
+                    tableView.backgroundView  = noDataLabel
+                    tableView.separatorStyle  = .none
+            }
+        
+            return numOfSections
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -183,7 +203,7 @@ class MasterViewController: UITableViewController, GADBannerViewDelegate {
     func addBannerViewToView(_ bannerView: GADBannerView) {
         GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = [ "93ddb1ef67fc1f466a884b2bc9d2a528" ]
 
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/29347355716" //test id: ca-app-pub-3940256099942544/29347355716
+        bannerView.adUnitID = "ca-app-pub-2537968127971950/6770287944" //test id: ca-app-pub-3940256099942544/29347355716
         //ad id: ca-app-pub-2537968127971950/6770287944
         bannerView.rootViewController = self
         bannerView.delegate = self

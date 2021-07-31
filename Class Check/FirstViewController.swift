@@ -64,13 +64,13 @@ class FirstViewController: UIViewController, UIScrollViewDelegate {
         slide4.backgroundColor = UIColor(patternImage: UIImage(named: "firstviewbackground")!)
         slide4.image.image = UIImage(named: "example3")
         slide4.title.text = "Viewing Classes"
-        slide4.descriptionLabel.text = "Press the calendar button to view your classes in a calendar. For convenience, the class table is also listed."
+        slide4.descriptionLabel.text = "Press the calendar button to view your classes in a calendar. The highlighted dates are your previous classes. For convenience, the class table is also listed."
         
         let slide5:slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! slide
         slide5.backgroundColor = UIColor(patternImage: UIImage(named: "firstviewbackground")!)
         slide5.image.image = UIImage(named: "classcheck")
         slide5.title.text = "ClassCheck+"
-        slide5.descriptionLabel.text = "Thank you for choosing ClassCheck+!"
+        slide5.descriptionLabel.text = "Thank you for using ClassCheck+!"
         
         slide5.nextButton.layer.borderWidth = 1.0
         slide5.nextButton.layer.borderColor = UIColor.white.cgColor
