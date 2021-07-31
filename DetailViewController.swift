@@ -12,12 +12,15 @@ var id:Int = 0
 var tookClassArray = UserDefaults.standard.array(forKey: String(id)) ?? []
 
 
+
 class DetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var sportName: UILabel!
     @IBOutlet weak var duration: UILabel!
     @IBOutlet weak var tookClassTable: UITableView!
     @IBOutlet weak var nextClassDate: UILabel!
+    @IBOutlet weak var pageControl: UIPageControl!
+
     
     var name:String = ""
     var numClasses:Int = 0
@@ -32,6 +35,11 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         tookClassTable.backgroundColor = UIColor(white: 1, alpha: 0.1)
         tookClassTable.layer.borderColor = UIColor.white.cgColor
         tookClassTable.layer.borderWidth = 1.0
+        
+        
+                
+        let calendar = UIBarButtonItem(image: UIImage(named: "date2"), style: .plain, target: self, action: #selector(goToCalendar(_:)))
+        navigationItem.rightBarButtonItem = calendar
         
         
         
@@ -120,6 +128,15 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
     @objc func goBack(_ sender: Any){
         performSegue(withIdentifier: "detailToList", sender: self)
     }
+    
+    @objc func goToCalendar(_ sender: Any){
+        
+        let viewcont = secondDetailViewController()
+        viewcont.classdates = tookClassArray
+        self.navigationController?.pushViewController(viewcont, animated: true)
+        
+    }
+
     
     
 

@@ -50,24 +50,36 @@ class FirstViewController: UIViewController, UIScrollViewDelegate {
         
         let slide2:slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! slide
         slide2.backgroundColor = UIColor(patternImage: UIImage(named: "firstviewbackground")!)
-        slide2.image.image = UIImage(named: "classcheck")
-        slide2.title.text = "A Simple UI"
-        slide2.descriptionLabel.text = "Simply create a Class with the number of classes in a bundle and the interval between classes"
+        slide2.image.image = UIImage(named: "example1")
+        slide2.title.text = "Class Creation"
+        slide2.descriptionLabel.text = "Simply create a Class with the number of classes in a bundle/package and the interval between classes. For example, 10 weekly math sessions would be '10' in the bundle, and 'Weekly' in the wheel picker."
         
         let slide3:slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! slide
         slide3.backgroundColor = UIColor(patternImage: UIImage(named: "firstviewbackground")!)
-        slide3.image.image = UIImage(named: "classcheck")
-        slide3.title.text = "A Simple UI"
-        slide3.descriptionLabel.text = "In the Class, simply press the + button to signify that you have taken the class"
+        slide3.image.image = UIImage(named: "example2")
+        slide3.title.text = "Adding Classes"
+        slide3.descriptionLabel.text = "In the Class, press the + button to signify that you have taken the class, and you can see past and future classes. Delete the rows to change the next class date, or press the + button anytime to change the next class date."
         
-        slide3.nextButton.layer.borderWidth = 1.0
-        slide3.nextButton.layer.borderColor = UIColor.white.cgColor
-        slide3.nextButton.layer.cornerRadius = 8
-        slide3.nextButton.setTitleColor(UIColor.white, for: .normal)
-        slide3.nextButton.setTitle("→", for: .normal)
-        slide3.nextButton.addTarget(self, action: #selector(goToApp), for: .touchUpInside)
+        let slide4:slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! slide
+        slide4.backgroundColor = UIColor(patternImage: UIImage(named: "firstviewbackground")!)
+        slide4.image.image = UIImage(named: "example3")
+        slide4.title.text = "Viewing Classes"
+        slide4.descriptionLabel.text = "Press the calendar button to view your classes in a calendar. For convenience, the class table is also listed."
         
-        return [slide1, slide2, slide3]
+        let slide5:slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! slide
+        slide5.backgroundColor = UIColor(patternImage: UIImage(named: "firstviewbackground")!)
+        slide5.image.image = UIImage(named: "classcheck")
+        slide5.title.text = "ClassCheck+"
+        slide5.descriptionLabel.text = "Thank you for choosing ClassCheck+!"
+        
+        slide5.nextButton.layer.borderWidth = 1.0
+        slide5.nextButton.layer.borderColor = UIColor.white.cgColor
+        slide5.nextButton.layer.cornerRadius = 8
+        slide5.nextButton.setTitleColor(UIColor.white, for: .normal)
+        slide5.nextButton.setTitle("→", for: .normal)
+        slide5.nextButton.addTarget(self, action: #selector(goToApp), for: .touchUpInside)
+        
+        return [slide1, slide2, slide3, slide4, slide5]
     }
     
     @objc func goToApp(sender: UIButton!) {
@@ -118,14 +130,22 @@ class FirstViewController: UIViewController, UIScrollViewDelegate {
         
         let percentOffset: CGPoint = CGPoint(x: percentageHorizontalOffset, y: percentageVerticalOffset)
         
-        if(percentOffset.x > 0 && percentOffset.x <= 0.5) {
+        if(percentOffset.x > 0 && percentOffset.x <= 0.25) {
             
-            slides[0].image.transform = CGAffineTransform(scaleX: (0.5-percentOffset.x)/0.5, y: (0.5-percentOffset.x)/0.5)
-            slides[1].image.transform = CGAffineTransform(scaleX: percentOffset.x/0.5, y: percentOffset.x/0.5)
+            slides[0].image.transform = CGAffineTransform(scaleX: (0.25-percentOffset.x)/0.25, y: (0.25-percentOffset.x)/0.25)
+            slides[1].image.transform = CGAffineTransform(scaleX: percentOffset.x/0.25, y: percentOffset.x/0.25)
             
-        } else if(percentOffset.x > 0.5 && percentOffset.x <= 1) {
-            slides[1].image.transform = CGAffineTransform(scaleX: (1-percentOffset.x)/0.5, y: (1-percentOffset.x)/0.5)
-            slides[2].image.transform = CGAffineTransform(scaleX: percentOffset.x/1, y: percentOffset.x/1)
+        } else if(percentOffset.x > 0.25 && percentOffset.x <= 0.5) {
+            slides[1].image.transform = CGAffineTransform(scaleX: (0.5-percentOffset.x)/0.25, y: (0.5-percentOffset.x)/0.25)
+            slides[2].image.transform = CGAffineTransform(scaleX: percentOffset.x/0.5, y: percentOffset.x/0.5)
+            
+        } else if(percentOffset.x > 0.5 && percentOffset.x <= 0.75) {
+            slides[2].image.transform = CGAffineTransform(scaleX: (0.75-percentOffset.x)/0.25, y: (0.75-percentOffset.x)/0.25)
+            slides[3].image.transform = CGAffineTransform(scaleX: percentOffset.x/0.75, y: percentOffset.x/0.75)
+            
+        } else if(percentOffset.x > 0.75 && percentOffset.x <= 1) {
+            slides[3].image.transform = CGAffineTransform(scaleX: (1-percentOffset.x)/0.25, y: (1-percentOffset.x)/0.25)
+            slides[4].image.transform = CGAffineTransform(scaleX: percentOffset.x/1, y: percentOffset.x/1)
             
         }
 

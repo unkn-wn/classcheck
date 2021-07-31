@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                             </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="KxJ-MV-hlP">
-                                <rect key="frame" x="146" y="798.5" width="122.5" height="27.5"/>
+                                <rect key="frame" x="146" y="818.5" width="122.5" height="27.5"/>
                                 <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="currentPageIndicatorTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </pageControl>
@@ -29,7 +30,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="gCN-qW-rE0" firstAttribute="top" secondItem="ESS-Dt-Y29" secondAttribute="top" id="7JA-m4-kD7"/>
-                            <constraint firstAttribute="bottom" secondItem="KxJ-MV-hlP" secondAttribute="bottom" constant="70" id="Dks-ZY-G1T"/>
+                            <constraint firstAttribute="bottom" secondItem="KxJ-MV-hlP" secondAttribute="bottom" constant="50" id="Dks-ZY-G1T"/>
                             <constraint firstItem="gCN-qW-rE0" firstAttribute="bottom" secondItem="ESS-Dt-Y29" secondAttribute="bottom" id="clF-2C-0LJ"/>
                             <constraint firstItem="gCN-qW-rE0" firstAttribute="leading" secondItem="6mY-Tv-wbF" secondAttribute="leading" id="fMY-Gs-2NP"/>
                             <constraint firstItem="KxJ-MV-hlP" firstAttribute="centerX" secondItem="6mY-Tv-wbF" secondAttribute="centerX" id="iHh-Sw-9ah"/>
@@ -96,11 +97,11 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="TDJ-sP-TEd"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vdp-d2-WHI">
-                                <rect key="frame" x="20" y="169" width="215" height="643"/>
+                                <rect key="frame" x="20" y="169" width="215" height="592"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -116,12 +117,12 @@
                                 <sections/>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XEp-iE-kpv">
-                                <rect key="frame" x="245" y="776.5" width="164" height="35.5"/>
+                                <rect key="frame" x="245" y="725" width="164" height="35.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35.5" id="fIO-X9-Zgl"/>
                                     <constraint firstAttribute="width" constant="164" id="pC3-U5-saW"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="NotoSansChakma-Regular" family="Noto Sans Chakma" pointSize="24"/>
+                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Classes Left:" textAlignment="center" lineBreakMode="clip" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yc1-b0-fzG">
@@ -129,34 +130,35 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="TcW-34-E23"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next class:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LIQ-0x-b0B">
-                                <rect key="frame" x="286" y="739" width="83" height="29"/>
+                                <rect key="frame" x="266" y="685.5" width="122" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="sGa-yw-FEb"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VUw-jc-0yf"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="vdp-d2-WHI" firstAttribute="leading" secondItem="VUw-jc-0yf" secondAttribute="leading" constant="20" id="12e-Ct-AhK"/>
                             <constraint firstItem="yc1-b0-fzG" firstAttribute="centerX" secondItem="m9z-ku-YqT" secondAttribute="centerX" id="5J3-oP-0Ir"/>
                             <constraint firstItem="m3c-kf-uoP" firstAttribute="top" secondItem="m9z-ku-YqT" secondAttribute="bottom" constant="7" id="D8H-9I-0jx"/>
-                            <constraint firstAttribute="bottom" secondItem="XEp-iE-kpv" secondAttribute="bottom" constant="30" id="GHs-O3-UhZ"/>
-                            <constraint firstItem="XEp-iE-kpv" firstAttribute="top" secondItem="LIQ-0x-b0B" secondAttribute="bottom" constant="8.5" id="GbV-Kc-8Ag"/>
-                            <constraint firstAttribute="bottom" secondItem="vdp-d2-WHI" secondAttribute="bottom" constant="30" id="Kat-in-RC8"/>
+                            <constraint firstAttribute="bottom" secondItem="XEp-iE-kpv" secondAttribute="bottom" constant="81.5" id="GHs-O3-UhZ"/>
+                            <constraint firstItem="XEp-iE-kpv" firstAttribute="top" secondItem="LIQ-0x-b0B" secondAttribute="bottom" constant="10.5" id="GbV-Kc-8Ag"/>
+                            <constraint firstAttribute="bottom" secondItem="vdp-d2-WHI" secondAttribute="bottom" constant="81" id="Kat-in-RC8"/>
                             <constraint firstItem="yc1-b0-fzG" firstAttribute="leading" secondItem="vdp-d2-WHI" secondAttribute="trailing" constant="7" id="KuH-Vj-eCT"/>
                             <constraint firstItem="VUw-jc-0yf" firstAttribute="trailing" secondItem="m9z-ku-YqT" secondAttribute="trailing" constant="5" id="Mv4-vd-PgC"/>
                             <constraint firstItem="XEp-iE-kpv" firstAttribute="leading" secondItem="m9z-ku-YqT" secondAttribute="leading" id="QF8-iD-vlA"/>
                             <constraint firstItem="VUw-jc-0yf" firstAttribute="trailing" secondItem="m3c-kf-uoP" secondAttribute="trailing" constant="50" id="Ucm-6H-xhE"/>
                             <constraint firstItem="Go7-cy-0Nl" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" id="Xmc-am-ITn"/>
                             <constraint firstItem="m9z-ku-YqT" firstAttribute="top" secondItem="Go7-cy-0Nl" secondAttribute="bottom" constant="61" id="afe-iD-vnf"/>
-                            <constraint firstItem="LIQ-0x-b0B" firstAttribute="leading" secondItem="vdp-d2-WHI" secondAttribute="trailing" constant="51" id="bn4-T6-kQB"/>
+                            <constraint firstItem="LIQ-0x-b0B" firstAttribute="leading" secondItem="vdp-d2-WHI" secondAttribute="trailing" constant="31" id="bn4-T6-kQB"/>
                             <constraint firstItem="m9z-ku-YqT" firstAttribute="leading" secondItem="vdp-d2-WHI" secondAttribute="trailing" constant="10" id="cm7-gN-Rc4"/>
                             <constraint firstItem="vdp-d2-WHI" firstAttribute="top" secondItem="Go7-cy-0Nl" secondAttribute="bottom" constant="33" id="f2H-m6-VEM"/>
                             <constraint firstItem="Go7-cy-0Nl" firstAttribute="trailing" secondItem="svH-Pt-448" secondAttribute="trailingMargin" id="ghL-Mj-Qqp"/>
@@ -184,7 +186,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="708.69565217391312" y="128.57142857142856"/>
+            <point key="canvasLocation" x="819" y="129"/>
+        </scene>
+        <!--secondDetailView-->
+        <scene sceneID="MUL-Bn-E3R">
+            <objects>
+                <viewController storyboardIdentifier="secondDetailView" title="secondDetailView" id="HPy-ue-gOp" customClass="secondDetailViewController" customModule="Class_Check" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tSm-ET-MlO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="GEu-T4-wSD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="452-9n-6Ew" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2047.826086956522" y="326.78571428571428"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="Nki-YV-4Qg">
@@ -257,7 +274,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="6QF-J9-9E5"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Class name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="yhC-Mv-lOM">
@@ -270,7 +287,7 @@
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Class Name:" textAlignment="center" lineBreakMode="clip" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rXf-Jp-nCN">
                                 <rect key="frame" x="20" y="156" width="161" height="22"/>
-                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration: " textAlignment="center" lineBreakMode="clip" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cUY-CP-vOV">
@@ -278,7 +295,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="UVM-jF-u45"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="YTe-Ii-NWo">
@@ -291,7 +308,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="XU1-Bv-JfW"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="25"/>
                                 <state key="normal" title="Create">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -350,7 +367,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="JEX-9P-axG" kind="relationship" relationship="rootViewController" id="GKi-kA-LjT"/>
+                        <segue destination="JEX-9P-axG" kind="relationship" relationship="rootViewController" id="yJL-Pm-QKg"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SLD-UC-DBI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -360,12 +377,15 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="6S0-TO-JiA"/>
-        <segue reference="Aph-Eh-NIb"/>
+        <segue reference="xat-RB-dBj"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="1" width="74" height="65"/>
         <systemColor name="darkTextColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

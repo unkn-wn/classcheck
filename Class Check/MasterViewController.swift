@@ -184,6 +184,7 @@ class MasterViewController: UITableViewController, GADBannerViewDelegate {
         GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = [ "93ddb1ef67fc1f466a884b2bc9d2a528" ]
 
         bannerView.adUnitID = "ca-app-pub-3940256099942544/29347355716" //test id: ca-app-pub-3940256099942544/29347355716
+        //ad id: ca-app-pub-2537968127971950/6770287944
         bannerView.rootViewController = self
         bannerView.delegate = self
         bannerView.translatesAutoresizingMaskIntoConstraints = false

@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,11 +14,10 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EFV-Fo-uwz">
-                    <rect key="frame" x="20" y="287" width="374" height="200"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EFV-Fo-uwz">
+                    <rect key="frame" x="20" y="287" width="374" height="353"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="374" id="WZB-1J-6VU"/>
-                        <constraint firstAttribute="height" constant="200" id="oMz-ad-h6c"/>
+                        <constraint firstAttribute="height" constant="353" id="7eL-Mh-0xm"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="NotoSansChakma-Regular" family="Noto Sans Chakma" pointSize="20"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -43,11 +40,11 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ed-Zb-wfb">
-                    <rect key="frame" x="177" y="495" width="60" height="42"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ed-Zb-wfb">
+                    <rect key="frame" x="177" y="750" width="60" height="42"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="42" id="VWH-Yv-01L"/>
-                        <constraint firstAttribute="width" constant="60" id="X8t-Uj-Wgs"/>
+                        <constraint firstAttribute="height" constant="42" id="jXD-Qg-Zj1"/>
+                        <constraint firstAttribute="width" constant="60" id="txX-iR-Oyb"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                     <state key="normal" title=" ">
@@ -55,22 +52,20 @@
                     </state>
                 </button>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <constraints>
-                <constraint firstItem="8ed-Zb-wfb" firstAttribute="top" secondItem="EFV-Fo-uwz" secondAttribute="bottom" constant="8" symbolic="YES" id="0CR-31-5eh"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="rZN-N5-d51" secondAttribute="trailing" constant="20" id="18n-kl-895"/>
                 <constraint firstItem="rZN-N5-d51" firstAttribute="top" secondItem="rfv-Lb-w8P" secondAttribute="bottom" constant="8" symbolic="YES" id="8WF-QI-wO2"/>
-                <constraint firstItem="EFV-Fo-uwz" firstAttribute="top" secondItem="rZN-N5-d51" secondAttribute="bottom" constant="7.5" id="AzG-c7-XFd"/>
-                <constraint firstItem="EFV-Fo-uwz" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="Wss-8Q-c37"/>
-                <constraint firstItem="EFV-Fo-uwz" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Xds-yR-AJ8"/>
+                <constraint firstItem="8ed-Zb-wfb" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="OxO-aD-urS"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="8ed-Zb-wfb" secondAttribute="bottom" constant="70" id="POH-dV-4Fv"/>
+                <constraint firstItem="EFV-Fo-uwz" firstAttribute="top" secondItem="rZN-N5-d51" secondAttribute="bottom" constant="7.5" id="Rud-me-cUM"/>
                 <constraint firstItem="rZN-N5-d51" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Y2n-qG-gWa"/>
-                <constraint firstItem="8ed-Zb-wfb" firstAttribute="top" secondItem="EFV-Fo-uwz" secondAttribute="bottom" constant="8" symbolic="YES" id="ZoL-EZ-ChI"/>
-                <constraint firstItem="8ed-Zb-wfb" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="gm7-Nl-REs"/>
                 <constraint firstItem="rfv-Lb-w8P" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="25" id="hDu-sm-oPf"/>
                 <constraint firstItem="rfv-Lb-w8P" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="hEg-HM-PMg"/>
                 <constraint firstItem="rZN-N5-d51" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="m8Z-IX-HSj"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="EFV-Fo-uwz" secondAttribute="trailing" constant="20" id="zIB-hw-EJU"/>
+                <constraint firstItem="EFV-Fo-uwz" firstAttribute="leading" secondItem="rZN-N5-d51" secondAttribute="leading" id="mmB-gR-T4D"/>
+                <constraint firstItem="EFV-Fo-uwz" firstAttribute="trailing" secondItem="rZN-N5-d51" secondAttribute="trailing" id="pmW-eF-vaB"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="descriptionLabel" destination="EFV-Fo-uwz" id="Fmx-SC-2Wy"/>
                 <outlet property="image" destination="rfv-Lb-w8P" id="KE8-1p-42n"/>
