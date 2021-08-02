@@ -29,7 +29,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
     
     override func viewDidLoad() {
         tookClassArray = UserDefaults.standard.array(forKey: String(id)) ?? []
-
+        
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "appbackground")!)
         tookClassTable.backgroundColor = UIColor(white: 1, alpha: 0.1)
@@ -124,6 +124,14 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         // Do any additional setup after loading the view.
         UserDefaults.standard.synchronize()
     }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        tookClassTable?.reloadData()
+    }
+    
     
     @objc func goBack(_ sender: Any){
         performSegue(withIdentifier: "detailToList", sender: self)

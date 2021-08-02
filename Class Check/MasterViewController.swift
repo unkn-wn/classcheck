@@ -142,7 +142,7 @@ class MasterViewController: UITableViewController, GADBannerViewDelegate {
         if objects.count > 0
             {
                 tableView.separatorStyle = .singleLine
-                numOfSections = 1
+                numOfSections = objects.count
                 tableView.backgroundView = nil
             }
             else

@@ -43,30 +43,35 @@ class FirstViewController: UIViewController, UIScrollViewDelegate {
     func createSlides() -> [slide] {
         
         let slide1:slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! slide
+        slide1.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
         slide1.backgroundColor = UIColor(patternImage: UIImage(named: "firstviewbackground")!)
         slide1.image.image = UIImage(named: "classcheck")
         slide1.title.text = "Welcome to Class Check"
         slide1.descriptionLabel.text = "An easy way to keep track of all your extracurricular classes"
         
         let slide2:slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! slide
+        slide2.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
         slide2.backgroundColor = UIColor(patternImage: UIImage(named: "firstviewbackground")!)
         slide2.image.image = UIImage(named: "example1")
         slide2.title.text = "Class Creation"
         slide2.descriptionLabel.text = "Simply create a Class with the number of classes in a bundle/package and the interval between classes. For example, 10 weekly math sessions would be '10' in the bundle, and 'Weekly' in the wheel picker."
         
         let slide3:slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! slide
+        slide3.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
         slide3.backgroundColor = UIColor(patternImage: UIImage(named: "firstviewbackground")!)
         slide3.image.image = UIImage(named: "example2")
         slide3.title.text = "Adding Classes"
         slide3.descriptionLabel.text = "In the Class, press the + button to signify that you have taken the class, and you can see past and future classes. Delete the rows to change the next class date, or press the + button anytime to change the next class date."
         
         let slide4:slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! slide
+        slide4.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
         slide4.backgroundColor = UIColor(patternImage: UIImage(named: "firstviewbackground")!)
         slide4.image.image = UIImage(named: "example3")
         slide4.title.text = "Viewing Classes"
         slide4.descriptionLabel.text = "Press the calendar button to view your classes in a calendar. The highlighted dates are your previous classes. For convenience, the class table is also listed."
         
         let slide5:slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! slide
+        slide5.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
         slide5.backgroundColor = UIColor(patternImage: UIImage(named: "firstviewbackground")!)
         slide5.image.image = UIImage(named: "classcheck")
         slide5.title.text = "ClassCheck+"
@@ -92,12 +97,12 @@ class FirstViewController: UIViewController, UIScrollViewDelegate {
     }
     
     func setupSlideScrollView(slides : [slide]) {
-        scrollView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
-        scrollView.contentSize = CGSize(width: view.frame.width * CGFloat(slides.count), height: view.frame.height)
+        scrollView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
+        scrollView.contentSize = CGSize(width: UIScreen.main.bounds.size.width * CGFloat(slides.count), height: UIScreen.main.bounds.size.height)
         scrollView.isPagingEnabled = true
         
         for i in 0 ..< slides.count {
-            slides[i].frame = CGRect(x: view.frame.width * CGFloat(i), y: 0, width: view.frame.width, height: view.frame.height)
+            slides[i].frame = CGRect(x: UIScreen.main.bounds.size.width * CGFloat(i), y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
             scrollView.addSubview(slides[i])
         }
     }

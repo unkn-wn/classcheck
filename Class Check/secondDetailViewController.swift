@@ -9,6 +9,7 @@
 import UIKit
 import JTAppleCalendar
 
+
 class secondDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     let cellReuseIdentifier = "tookClassCell1"
@@ -20,7 +21,7 @@ class secondDetailViewController: UIViewController, UITableViewDataSource, UITab
         return tookClassTable1
     }()
     
-    let temp = DetailViewController()
+    var temp = DetailViewController()
     public var classdates: [Any] = []
     var classdates2: [Date] = []
     var classdates3: [String] = []
@@ -116,6 +117,7 @@ class secondDetailViewController: UIViewController, UITableViewDataSource, UITab
         
         
     }
+
     
     
     func convertDateFormater(_ date: Any) -> Date {
@@ -156,6 +158,8 @@ class secondDetailViewController: UIViewController, UITableViewDataSource, UITab
 
 }
 
+
+
 // MARK: - JTAPPLECALENDAR -
 
 extension secondDetailViewController: JTAppleCalendarViewDelegate, JTAppleCalendarViewDataSource {
@@ -174,8 +178,8 @@ extension secondDetailViewController: JTAppleCalendarViewDelegate, JTAppleCalend
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy MM dd"
         let today = Date()
-        let startDate = Calendar.current.date(byAdding: .month, value: -2, to: today)!
-        let endDate = Calendar.current.date(byAdding: .month, value: 4, to: today)!
+        let startDate = Calendar.current.date(byAdding: .month, value: -6, to: today)!
+        let endDate = Calendar.current.date(byAdding: .month, value: 3, to: today)!
         return ConfigurationParameters(startDate: startDate, endDate: endDate, generateOutDates: .off, hasStrictBoundaries: true)
     }
     
@@ -185,11 +189,28 @@ extension secondDetailViewController: JTAppleCalendarViewDelegate, JTAppleCalend
         let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: "dateCell", for: indexPath) as! dateCell
         cell.dateLabel.text = cellState.text
         self.calendar(calendar, willDisplay: cell, forItemAt: date, cellState: cellState, indexPath: indexPath)
+
+        let format = DateFormatter()
+        format.dateFormat = "yyyy-MM-dd"
+        
+        let temp2 = format.string(from: date)
+        let temp = format.string(from: Date())
+        if temp2 == temp {
+            cell.dateLabel.textColor = UIColor(patternImage: UIImage(named: "currentDay")!)
+        }
+        
         return cell
     }
     
     
     func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
+        /*
+        let format = DateFormatter()
+        format.dateFormat = "MM/dd/yyyy"
+        
+        let temp2 = format.string(from: date)
+        tookClassArray.append(temp2)
+ */
         configureCell(view: cell, cellState: cellState)
         //print(cellState.date, cellState.day)
     }
@@ -210,7 +231,16 @@ extension secondDetailViewController: JTAppleCalendarViewDelegate, JTAppleCalend
         
     
     func handleCellTextColor(cell: dateCell, cellState: CellState) {
-        if cellState.dateBelongsTo == .thisMonth {
+        let format = DateFormatter()
+        format.dateFormat = "yyyy-MM-dd"
+        
+        let temp2 = format.string(from: cellState.date)
+        let temp = format.string(from: Date())
+        
+        if temp == temp2 {
+            cell.dateLabel.textColor = UIColor(patternImage: UIImage(named: "currentDay")!)
+            cell.dateLabel.font = UIFont(name: "Noto Sans Myanmar Bold", size: 20)
+        } else if cellState.dateBelongsTo == .thisMonth {
             cell.dateLabel.textColor = UIColor.white
             cell.dateLabel.font = UIFont(name: "Noto Sans Myanmar Bold", size: 20)
         } else {
