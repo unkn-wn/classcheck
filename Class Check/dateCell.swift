@@ -18,7 +18,7 @@ class dateCell: JTAppleCell {
     
     var selectedView : UIView = {
         let selectedView = UIView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
-        selectedView.backgroundColor = UIColor(patternImage: UIImage(named: "pink")!)
+        selectedView.backgroundColor = UIColor(patternImage: UIImage(named: "white")!)
         return selectedView
     }()
     
